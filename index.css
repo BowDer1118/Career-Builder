@@ -1,0 +1,443 @@
+    * {
+        /* 將內外邊距初始化以便往後的設定 */
+        margin: 0px;
+        padding: 0px;
+        /* 指定的字體 */
+        font-family: Microsoft YaHei UI;
+    }
+    /* 設定定位方式讓子孫定位 */
+    
+    .header {
+        width: 100%;
+        /*自定義高度防止浮動崩潰 */
+        height: 60px;
+        background-color: #07cbc9;
+        position: fixed;
+        z-index: 500;
+        top: 0px;
+    }
+    
+    .header img {
+        float: left;
+        margin: 6px 150px;
+    }
+    
+    .header>.menu {
+        height: 100%;
+        width: auto;
+        float: right;
+    }
+    
+    .header>.menu>ul {
+        list-style: none;
+        height: 100%;
+        /* 調整邊距 */
+        margin: 0px 100px 0px 0px;
+    }
+    
+    .header>.menu>ul li {
+        /* 將列表的元素從直向顯示轉換成橫向顯示 */
+        float: left;
+        /* 讓文字垂直與水平置中 */
+        height: 100%;
+        line-height: 60px;
+        padding: 0px 5px 0px 5px;
+    }
+    
+    .header>.menu>ul>li>a {
+        /* 取消底線效果 */
+        text-decoration: none;
+        /* 將文字轉換為全大寫 */
+        text-transform: uppercase;
+    }
+    /* 讓文字保持白色 */
+    
+    .header>.menu>ul>li>a:visited {
+        color: #fff;
+    }
+    
+    .header>.menu>ul>li>a:link {
+        color: #fff;
+    }
+    /* 設定定位方式讓子孫定位 */
+    
+    .content {
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .content>.banner {
+        width: 100%;
+        height: 585.78px;
+        /* 以相對位置當作子節點(層級關係)的參照點 */
+        position: relative;
+        margin-top: 60px;
+    }
+    
+    .content>.banner>img {
+        /* 讓圖片相對於瀏覽器100%顯示 */
+        width: 100%;
+        height: 100%;
+        /* 設定層級關係 */
+        position: absolute;
+        z-index: 100;
+    }
+    /* 遮罩設定 */
+    
+    .content>.banner>.mask {
+        /* 長寬遵從父元素 */
+        height: 100%;
+        width: 100%;
+        /* 遮罩顏色 */
+        background-color: #000;
+        /* 半透明(遮罩)效果 */
+        opacity: 0.4;
+        /* 設定層級關係 */
+        position: absolute;
+        z-index: 200;
+    }
+    
+    .content>.banner>ul {
+        height: 100%;
+        width: 100%;
+        /* 設定層級關係 */
+        position: absolute;
+        z-index: 300;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .content>.banner>ul>li {
+        margin-top: 30px;
+    }
+    
+    .content>.banner>ul .user_info,
+    .enter_user_info {
+        /* 將背景色取消 */
+        background-color: transparent;
+        border: 2px solid gray;
+        color: gray;
+        width: 300px;
+    }
+    
+    .content>.banner>ul input[type="text"] {
+        height: 40px;
+    }
+    
+    .content>.banner>ul a {
+        text-decoration: none;
+        padding: 8px;
+    }
+    
+    .content>.about>.about-top {
+        position: relative;
+        width: 100%;
+        height: 800px;
+    }
+    
+    .content>.about>.about-top>.title {
+        width: 500px;
+        padding-top: 50px;
+        margin: 0px auto;
+    }
+    
+    .content>.about>.about-top>.title>.title_dash {
+        margin: 10px auto 0px auto;
+        width: 40px;
+        height: 1px;
+        border-bottom: 2px solid #07cbc9;
+    }
+    
+    .content>.about>.about-top>.title>h1 {
+        font-size: 50px;
+        color: #000;
+        text-align: center;
+    }
+    
+    .content>.about>.about-top>.title>.title_intro {
+        padding-top: 20px;
+        text-align: center;
+        opacity: 0.6;
+    }
+    
+    .content>.about>.about-top>.about-top-content {
+        height: 524.28px;
+        width: 1200px;
+        margin: 50px auto 0px auto;
+    }
+    
+    .content>.about>.about-top>.about-top-content * {
+        float: left;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left,
+    .right {
+        width: 250px;
+        height: 435px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-top {
+        width: 200px;
+        height: 150px;
+        border: 2px solid #07cbc9;
+        margin-left: 20px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-top>.num {
+        width: 180px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 8px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-top>.dash {
+        width: 40px;
+        height: 10px;
+        margin-left: 80px;
+        border-top: 3px solid #07cbc9;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-top>.student {
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        margin-left: 8px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-bottom {
+        width: 200px;
+        height: 150px;
+        border: 2px solid #07cbc9;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-bottom>.num {
+        width: 180px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 8px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-bottom>.dash {
+        width: 40px;
+        height: 10px;
+        margin-left: 80px;
+        border-top: 3px solid #07cbc9;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.right>.right-bottom>.faculty {
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-top {
+        width: 100%;
+        height: 120px;
+        font-size: 40px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-top .before {
+        padding: 35px;
+        line-height: 0px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-top .after {
+        padding: 15px;
+        line-height: 15px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-bottom {
+        width: 125%;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.4);
+        border: 1px solid gray;
+        margin-left: 15px;
+        padding: 20px;
+        position: relative;
+        z-index: 99;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-bottom div {
+        border: 1px 0px;
+        border-style: solid;
+        border-color: #000;
+        margin-top: 15px;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-bottom div a {
+        width: 100px;
+        height: 40px;
+        text-decoration: none;
+        background-color: #000;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .content>.about>.about-top>.about-top-content>.left>.left-bottom div a:visited {
+        color: #fff;
+    }
+    
+    .content>.about>.about-bottom {
+        overflow: hidden;
+    }
+    
+    .content>.about>.about-bottom>.ul {
+        width: 100%;
+    }
+    
+    .content>.about>.about-bottom>ul>li {
+        list-style: none;
+        float: left;
+        width: 25%;
+        height: 396px;
+        background-color: #07cbc9;
+    }
+    
+    .content>.about>.about-bottom>ul>li img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="title"] {
+        width: 400px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 35px;
+        padding: 20px 0px 0px 40px;
+        color: #fff;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="content"] {
+        width: 350px;
+        height: 60px;
+        line-height: 25px;
+        padding: 0px 0px 0px 40px;
+        color: #fff;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="introduction"] {
+        width: 350px;
+        height: 120px;
+        padding: 0px 0px 0px 40px;
+        color: #fff;
+        opacity: 0.8;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="explore"] {
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        margin: 40px auto;
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #000;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="explore"] a {
+        text-decoration: none;
+        margin-left: 6px;
+        color: #fff;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="explore"] a:link {
+        color: #fff;
+    }
+    
+    .content>.about>.about-bottom>ul>li div[class="explore"] a:visited {
+        color: #fff;
+    }
+    
+    .content>.gallery {
+        position: relative;
+        width: 100%;
+        height: 900px;
+    }
+    
+    .content>.gallery>.title {
+        width: 500px;
+        padding-top: 50px;
+        margin: 0px auto;
+    }
+    
+    .content>.gallery>.title>.title_dash {
+        margin: 10px auto 0px auto;
+        width: 40px;
+        height: 1px;
+        border-bottom: 3px solid #07cbc9;
+    }
+    
+    .content>.gallery>.title>h1 {
+        font-size: 50px;
+        color: #000;
+        text-align: center;
+    }
+    
+    .content>.gallery>.title>.title_intro {
+        padding-top: 20px;
+        text-align: center;
+        opacity: 0.6;
+    }
+    
+    .content>.gallery>.content {
+        width: 1250px;
+        height: 650px;
+        overflow: hidden;
+        margin: 0px auto;
+    }
+    
+    .content>.gallery>.content>ul {
+        width: 100%;
+        height: 100%;
+        padding-left: 25px;
+    }
+    
+    .content>.gallery>.content>ul li {
+        width: 360px;
+        height: 280px;
+        list-style: none;
+        float: left;
+        margin: 20px;
+    }
+    
+    .content>.gallery>.content>ul li div[class="img"] {
+        width: 360px;
+        height: 240px;
+    }
+    
+    .content>.gallery>.content>ul li div[class="intro"] {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        background-color: #000;
+        box-sizing: border-box;
+        padding-left: 15px;
+        font-size: 15px;
+    }
+    
+    .footer {
+        width: 100%;
+        height: 60px;
+        background-color: #07cbc9;
+    }
+    
+    .footer div {
+        width: 405px;
+        height: 100%;
+        color: #fff;
+        line-height: 60px;
+        margin: 0px auto;
+    }
